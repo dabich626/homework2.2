@@ -1,20 +1,20 @@
 public class PrintService {
 
-    public void print(griffindor[] students){
+    public void print(Griffindor[] students){
 
-        System.out.println("имя ученика" + griffindor.getName() + " характеристики: " + griffindor.getNobility() + ", " + griffindor.getHonor() + ", " + griffindor.getBrave());
+        System.out.println("имя ученика" + Griffindor.getName() + " характеристики: " + Griffindor.getNobility() + ", " + Griffindor.getHonor() + ", " + Griffindor.getBrave());
 
         }
 
-    public void print(slytherin[] students){
+    public void print(Slytherin[] students){
 
-        System.out.println("имя ученика" + slytherin.getName() + " характеристики: " + slytherin.getCunning() + ", " + slytherin.getAmbition() + ", " + slytherin.getDetermination() + ", " + slytherin.getResourcefulness() +  ", " + slytherin.getPowerWanter());
+        System.out.println("имя ученика" + Slytherin.getName() + " характеристики: " + Slytherin.getCunning() + ", " + Slytherin.getAmbition() + ", " + Slytherin.getDetermination() + ", " + Slytherin.getResourcefulness() +  ", " + Slytherin.getPowerWanter());
 
     }
 
-    public void print(hufflpuff[] students){
+    public void print(Hufflpuff[] students){
 
-        System.out.println("имя ученика" +   " характеристики: " + hufflpuff.getName() + ", " + hufflpuff.getIndustriousness() + ", " + hufflpuff.getHonesty() + ", " + hufflpuff.getLoyalty());
+        System.out.println("имя ученика" +   " характеристики: " + Hufflpuff.getName() + ", " + Hufflpuff.getIndustriousness() + ", " + Hufflpuff.getHonesty() + ", " + Hufflpuff.getLoyalty());
 
     }
 

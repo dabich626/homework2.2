@@ -1,7 +1,4 @@
-public class ravenclaw {
-
-
-    private String name;
+public class Ravenclaw extends Hogwarts {
 
     private int mind = 0;
 
@@ -9,33 +6,28 @@ public class ravenclaw {
 
     private int creative = 0;
 
-    public ravenclaw (String name, int mind, int wisdom, int creative){
+    public Ravenclaw (String name, int mind, int wisdom, int creative){
 
-        this.name = name;
+        super(name);
         this.mind = mind;
         this.wisdom = wisdom;
         this.creative = creative;
 
     }
 
-    public static String getName (){
+    public int getMind(){
 
-        return null;
+        return mind;
     }
 
-    public static int getMind(){
+    public int getWisdom(){
 
-        return 0;
+        return wisdom;
     }
 
-    public static int getWisdom(){
+    public int getCreative(){
 
-        return 0;
-    }
-
-    public static int getCreative(){
-
-        return 0;
+        return creative;
     }
 
     public String toString(){

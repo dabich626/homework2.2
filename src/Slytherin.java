@@ -1,5 +1,4 @@
-public class slytherin {
-    private String name;
+public class Slytherin extends Hogwarts {
     private int cunning = 0;
     private int determination = 0;
 
@@ -9,9 +8,9 @@ public class slytherin {
 
     private int powerWanter = 0;
 
-    public slytherin (String name, int cunning, int determination, int ambition, int resourcefulness, int powerWanter) {
+    public Slytherin (String name, int cunning, int determination, int ambition, int resourcefulness, int powerWanter) {
 
-        this.name = name;
+        super(name);
         this.cunning = cunning;
         this.determination = determination;
         this.ambition = ambition;
@@ -19,40 +18,36 @@ public class slytherin {
         this.powerWanter = powerWanter;
 
 }
-
-public static String getName(){
-
-    return null;
 }
 
-public static int getCunning(){
+public int getCunning(){
 
 
-    return 0;
+    return cunning();
 }
 
-public static int getDetermination() {
+public  int getDetermination() {
 
 
-    return 0;
+    return determination();
 }
 
-public static int getAmbition(){
+public  int getAmbition(){
 
 
-    return 0;
+    return ambition();
 }
 
 public static int getResourcefulness(){
 
 
-    return 0;
+    return Resourcefulness;
 }
 
 public static int getPowerWanter(){
 
 
-    return 0;
+    return PowerWanter();
 }
 
 public String toString(){
@@ -61,5 +56,6 @@ public String toString(){
 
     return null;
 }
+
 
 }

@@ -1,6 +1,5 @@
-public class hufflpuff {
+public class Hufflpuff extends Hogwarts {
 
-    private String name;
 
     private int industriousness = 0;
 
@@ -8,33 +7,28 @@ public class hufflpuff {
 
     private int honesty = 0;
 
-    public hufflpuff (String name, int industriousness, int loyalty, int honesty) {
+    public Hufflpuff (String name, int industriousness, int loyalty, int honesty) {
 
-        this.name = name;
+        super(name);
         this.industriousness = industriousness;
         this.loyalty = loyalty;
         this.honesty = honesty;
 
     }
 
-    public static String getName (){
+    public int getIndustriousness(){
 
-        return null;
+        return industriousness;
     }
 
-    public static int getIndustriousness(){
+    public int getLoyalty(){
 
-        return 0;
+        return loyalty;
     }
 
-    public static int getLoyalty(){
+    public int getHonesty(){
 
-        return 0;
-    }
-
-    public static int getHonesty(){
-
-        return 0;
+        return honesty;
     }
 
     public String toString(){

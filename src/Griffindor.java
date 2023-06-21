@@ -1,6 +1,5 @@
-public class griffindor {
+public class Griffindor extends Hogwarts {
 
-    private String name;
 
     private int nobility = 0;
 
@@ -8,34 +7,29 @@ public class griffindor {
 
     private int brave = 0;
 
-    public griffindor(String name, int nobility, int honor, int brave){
+    public Griffindor(String name, int nobility, int honor, int brave){
 
-        this.name = name;
+        super(name);
         this.nobility = nobility;
         this.honor = honor;
         this.brave = brave;
 
     }
 
-    public static String getName(){
 
+    public  int getNobility(){
 
-        return null;
+        return nobility;
     }
 
-    public static int getNobility(){
+    public int getHonor(){
 
-        return 0;
+        return honor;
     }
 
-    public static int getHonor(){
+    public int getBrave(){
 
-        return 0;
-    }
-
-    public static int getBrave(){
-
-        return 0;
+        return brave;
     }
 
     public String toString(){
