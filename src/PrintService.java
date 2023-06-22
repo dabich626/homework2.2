@@ -18,9 +18,9 @@ public class PrintService {
 
     }
 
-    public void print(ravenclaw[] students){
+    public void print(Ravenclaw[] students){
 
-        System.out.println("имя ученика" + ravenclaw.getName() + " характеристики: " + ravenclaw.getMind() + ", " + ravenclaw.getWisdom() + ", " + ravenclaw.getCreative());
+        System.out.println("имя ученика" + Ravenclaw.getName() + " характеристики: " + Ravenclaw.getMind() + ", " + Ravenclaw.getWisdom() + ", " + Ravenclaw.getCreative());
 
     }
     }

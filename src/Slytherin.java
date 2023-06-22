@@ -52,7 +52,7 @@ public static int getPowerWanter(){
 
 public String toString(){
 
-    System.out.println("Имя студента: " + this.name + " характеристики: " + this.cunning + ", " + this.ambition + ", " + this.determination + ", " + this.resourcefulness + ", " + this.powerWanter);
+    System.out.println("Имя студента: " + " характеристики: " + this.cunning + ", " + this.ambition + ", " + this.determination + ", " + this.resourcefulness + ", " + this.powerWanter);
 
     return null;
 }
