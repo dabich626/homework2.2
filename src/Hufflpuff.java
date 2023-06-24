@@ -7,9 +7,9 @@ public class Hufflpuff extends Hogwarts {
 
     private int honesty = 0;
 
-    public Hufflpuff (String name, int industriousness, int loyalty, int honesty) {
+    public Hufflpuff (String name, int industriousness, int loyalty, int honesty, int magicPower, int transressionLiMit) {
 
-        super(name);
+        super(name, magicPower, transressionLiMit);
         this.industriousness = industriousness;
         this.loyalty = loyalty;
         this.honesty = honesty;
