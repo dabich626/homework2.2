@@ -35,6 +35,6 @@ public class Main {
         printService.print(students3);
         printService.print(students4)
 
-        });
+        };
     }
 }

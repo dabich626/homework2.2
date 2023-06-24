@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Ravenclaw extends Hogwarts {
 
     private int mind = 0;
@@ -15,25 +17,55 @@ public class Ravenclaw extends Hogwarts {
 
     }
 
-    public int getMind(){
-
+    public int getMind() {
         return mind;
     }
 
-    public int getWisdom(){
+    public void setMind(int mind) {
+        this.mind = mind;
+    }
 
+    public int getWisdom() {
         return wisdom;
     }
 
-    public int getCreative(){
+    public void setWisdom(int wisdom) {
+        this.wisdom = wisdom;
+    }
 
+    public int getCreative() {
         return creative;
     }
 
-    public String toString(){
+    public void setCreative(int creative) {
+        this.creative = creative;
+    }
 
-        System.out.println("Имя студента: " + this.name + " характеристики: " + this.mind + ", " + this.wisdom + ", " + this.creative);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Ravenclaw)) return false;
+        Ravenclaw ravenclaw = (Ravenclaw) o;
+        return getMind() == ravenclaw.getMind() && getWisdom() == ravenclaw.getWisdom() && getCreative() == ravenclaw.getCreative();
+    }
 
-        return null;
+    @Override
+    public int hashCode() {
+        return Objects.hash(getMind(), getWisdom(), getCreative());
+    }
+
+    public static void compare(Ravenclaw s) {
+
+        int sum =  mind + wisdom + creative;
+        int sSum = s.mind + s.wisdom + s.creative;
+
+        if (sum>sSum) {
+
+            System.out.println(getName()) + " обладает большим колличеством очков по качества факултета, чем " + s.getName());
+
+        } else {
+
+            System.out.println(getName()) + " обладает меньшим колличеством очков по качества факултета, чем " + s.getName());
+        }
     }
 }

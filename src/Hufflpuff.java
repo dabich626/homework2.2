@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Hufflpuff extends Hogwarts {
 
 
@@ -16,25 +18,56 @@ public class Hufflpuff extends Hogwarts {
 
     }
 
-    public int getIndustriousness(){
-
+    public int getIndustriousness() {
         return industriousness;
     }
 
-    public int getLoyalty(){
+    public void setIndustriousness(int industriousness) {
+        this.industriousness = industriousness;
+    }
 
+    public int getLoyalty() {
         return loyalty;
     }
 
-    public int getHonesty(){
+    public void setLoyalty(int loyalty) {
+        this.loyalty = loyalty;
+    }
 
+    public int getHonesty() {
         return honesty;
     }
 
-    public String toString(){
-
-        System.out.println("Имя студента: " + this.name + " характеристики: " + this.industriousness + ", " + this.loyalty + ", " + this.honesty);
-
-        return null;
+    public void setHonesty(int honesty) {
+        this.honesty = honesty;
     }
-}
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Hufflpuff)) return false;
+        Hufflpuff hufflpuff = (Hufflpuff) o;
+        return getIndustriousness() == hufflpuff.getIndustriousness() && getLoyalty() == hufflpuff.getLoyalty() && getHonesty() == hufflpuff.getHonesty();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIndustriousness(), getLoyalty(), getHonesty());
+    }
+
+    public static void compare(Hufflpuff s) {
+
+        int sum = industriousness + loyalty + honesty;
+        int sSum = s.industriousness + s.loyalty + s.honesty;
+        if (sum>sSum) {
+
+            System.out.println(getName()) + " обладает большим колличеством очков по качества факултета, чем " + s.getName());
+
+        } else {
+
+            System.out.println(getName()) + " обладает меньшим колличеством очков по качества факултета, чем " + s.getName());
+        }
+    }
+
+    }
+

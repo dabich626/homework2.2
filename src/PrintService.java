@@ -23,5 +23,7 @@ public class PrintService {
         System.out.println("имя ученика" + Ravenclaw.getName() + " характеристики: " + Ravenclaw.getMind() + ", " + Ravenclaw.getWisdom() + ", " + Ravenclaw.getCreative() + Ravenclaw.getMagicPower() + Ravenclaw.getTransgressionLimit());
 
     }
+
+
     }
 
