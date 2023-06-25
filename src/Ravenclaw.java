@@ -8,9 +8,9 @@ public class Ravenclaw extends Hogwarts {
 
     private int creative = 0;
 
-    public Ravenclaw (String name, int mind, int wisdom, int creative, int magicPower, int transressionLiMit){
+    public Ravenclaw(String name, int mind, int wisdom, int creative, int magicPower, int transressionLiMit) {
 
-        super(name, magicPower,transressionLiMit);
+        super(name, magicPower, transressionLiMit);
         this.mind = mind;
         this.wisdom = wisdom;
         this.creative = creative;
@@ -42,30 +42,34 @@ public class Ravenclaw extends Hogwarts {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Ravenclaw)) return false;
-        Ravenclaw ravenclaw = (Ravenclaw) o;
+    public boolean equals(Object s) {
+        super.equals(Object s);
+        if (this == s) return true;
+        if (!(s instanceof Ravenclaw)) return false;
+        Ravenclaw ravenclaw = (Ravenclaw) s;
         return getMind() == ravenclaw.getMind() && getWisdom() == ravenclaw.getWisdom() && getCreative() == ravenclaw.getCreative();
     }
 
     @Override
     public int hashCode() {
+        super.hashCode();
         return Objects.hash(getMind(), getWisdom(), getCreative());
     }
 
-    public static void compare(Ravenclaw s) {
+    public void compare(Ravenclaw s) {
 
-        int sum =  mind + wisdom + creative;
+        int sum = mind + wisdom + creative;
         int sSum = s.mind + s.wisdom + s.creative;
 
-        if (sum>sSum) {
+        if (sum > sSum) {
 
-            System.out.println(getName()) + " обладает большим колличеством очков по качества факултета, чем " + s.getName());
+            System.out.println(getName()) + " обладает большим колличеством очков по качества факултета, чем " + s.getName())
+            ;
 
         } else {
 
-            System.out.println(getName()) + " обладает меньшим колличеством очков по качества факултета, чем " + s.getName());
+            System.out.println(getName()) + " обладает меньшим колличеством очков по качества факултета, чем " + s.getName())
+            ;
         }
     }
 }

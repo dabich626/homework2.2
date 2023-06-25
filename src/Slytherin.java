@@ -10,16 +10,16 @@ public class Slytherin extends Hogwarts {
 
     private int powerWanter = 0;
 
-    public Slytherin (String name, int cunning, int determination, int ambition, int resourcefulness, int powerWanter, int magicPower, int transressionLiMit) {
+    public Slytherin(String name, int cunning, int determination, int ambition, int resourcefulness, int powerWanter, int magicPower, int transressionLiMit) {
 
-        super(name,magicPower,transressionLiMit);
+        super(name, magicPower, transressionLiMit);
         this.cunning = cunning;
         this.determination = determination;
         this.ambition = ambition;
         this.resourcefulness = resourcefulness;
         this.powerWanter = powerWanter;
 
-}
+    }
 
     public int getCunning() {
         return cunning;
@@ -61,38 +61,43 @@ public class Slytherin extends Hogwarts {
         this.powerWanter = powerWanter;
     }
 
-    public String toString(){
+    public String toString() {
 
-    System.out.println("Имя студента: " + " характеристики: " + this.cunning + ", " + this.ambition + ", " + this.determination + ", " + this.resourcefulness + ", " + this.powerWanter);
+        System.out.println("Имя студента: " + " характеристики: " + this.cunning + ", " + this.ambition + ", " + this.determination + ", " + this.resourcefulness + ", " + this.powerWanter);
 
-    return null;
-}
+        return null;
+    }
 
-public static void compare(Slytherin s) {
+    public void compare(Slytherin s) {
 
-        int sum = cunning+ determination + ambition + resourcefulness + powerWanter;
+        int sum = cunning + determination + ambition + resourcefulness + powerWanter;
         int sSum = s.cunning + s.ambition + s.determination + s.resourcefulness + s.powerWanter;
 
-        if (sum>sSum) {
+        if (sum > sSum) {
 
-            System.out.println(getName()) + " обладает большим колличеством очков по качества факултета, чем " + s.getName());
+            System.out.println(getName()) + " обладает большим колличеством очков по качества факултета, чем " + s.getName())
+            ;
 
         } else {
 
-            System.out.println(getName()) + " обладает меньшим колличеством очков по качества факултета, чем " + s.getName());
+            System.out.println(getName()) + " обладает меньшим колличеством очков по качества факултета, чем " + s.getName())
+            ;
         }
-}
+    }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Slytherin)) return false;
-        Slytherin slytherin = (Slytherin) o;
+
+    public boolean equals(Object s) {
+
+        super.equals(Object s);
+        if (this == s) return true;
+        if (!(s instanceof Slytherin)) return false;
+        Slytherin slytherin = (Slytherin) s;
         return getCunning() == slytherin.getCunning() && getDetermination() == slytherin.getDetermination() && getAmbition() == slytherin.getAmbition() && resourcefulness == slytherin.resourcefulness && powerWanter == slytherin.powerWanter;
     }
 
-    @Override
+
     public int hashCode() {
+        super.hashCode();
         return Objects.hash(getCunning(), getDetermination(), getAmbition(), resourcefulness, powerWanter);
     }
 }

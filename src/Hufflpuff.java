@@ -9,7 +9,7 @@ public class Hufflpuff extends Hogwarts {
 
     private int honesty = 0;
 
-    public Hufflpuff (String name, int industriousness, int loyalty, int honesty, int magicPower, int transressionLiMit) {
+    public Hufflpuff(String name, int industriousness, int loyalty, int honesty, int magicPower, int transressionLiMit) {
 
         super(name, magicPower, transressionLiMit);
         this.industriousness = industriousness;
@@ -43,31 +43,37 @@ public class Hufflpuff extends Hogwarts {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Hufflpuff)) return false;
-        Hufflpuff hufflpuff = (Hufflpuff) o;
+    public boolean equals(Object s) {
+
+        super.equals(Object s);
+        if (this == s) return true;
+        if (!(s instanceof Hufflpuff)) return false;
+        Hufflpuff hufflpuff = (Hufflpuff) s;
         return getIndustriousness() == hufflpuff.getIndustriousness() && getLoyalty() == hufflpuff.getLoyalty() && getHonesty() == hufflpuff.getHonesty();
     }
 
     @Override
     public int hashCode() {
+        super.hashCode();
         return Objects.hash(getIndustriousness(), getLoyalty(), getHonesty());
     }
 
-    public static void compare(Hufflpuff s) {
+    public void compare(Hufflpuff s) {
+
 
         int sum = industriousness + loyalty + honesty;
         int sSum = s.industriousness + s.loyalty + s.honesty;
-        if (sum>sSum) {
+        if (sum > sSum) {
 
-            System.out.println(getName()) + " обладает большим колличеством очков по качества факултета, чем " + s.getName());
+            System.out.println(getName()) + " обладает большим колличеством очков по качества факултета, чем " + s.getName())
+            ;
 
         } else {
 
-            System.out.println(getName()) + " обладает меньшим колличеством очков по качества факултета, чем " + s.getName());
+            System.out.println(getName()) + " обладает меньшим колличеством очков по качества факултета, чем " + s.getName())
+            ;
         }
     }
 
-    }
+}
 

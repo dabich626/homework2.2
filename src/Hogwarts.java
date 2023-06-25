@@ -9,7 +9,7 @@ public class Hogwarts {
 
     private int transgressionLimit;
 
-    public Hogwarts (String name, int magicPower, int transgressionLimit) {
+    public Hogwarts(String name, int magicPower, int transgressionLimit) {
 
         this.magicPower = magicPower;
         this.name = name;
@@ -54,24 +54,24 @@ public class Hogwarts {
     }
 
     public static void compare(Hogwarts s) {
-        if(this.getMagicPower() > s.magicPower) {
+        if (this.getMagicPower() > s.magicPower) {
 
             System.out.println(this.name + " обладает большей силой магии, чем " + s.name);
+        } else {
+
+            System.out.println(this.name + " обладает меньшей силой магии, чем " + s.name);
         }
-        else {
 
-            System.out.println(this.name + " обладает меньшей силой магии, чем " + s.name);}
+        if (this.getTransgressionLimit() > s.transgressionLimit) {
 
-            if (this.getTransgressionLimit() > s.transgressionLimit) {
+            System.out.println(this.name + " трансгрессирует дальше чем " + s.name);
 
-                System.out.println(this.name + " трансгрессирует дальше чем " + s.name);
+        } else {
 
-            } else {
-
-                System.out.println(this.name + " трансгрессирует на более короткие дистанции, чем " + s.name);
-            }
+            System.out.println(this.name + " трансгрессирует на более короткие дистанции, чем " + s.name);
         }
     }
+}
 }
 
 
